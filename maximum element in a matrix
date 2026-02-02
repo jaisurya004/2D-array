@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+   int row,col,max=0,r;
+   scanf("%d %d",&row,&col);
+   int a[row][col];
+   
+   for(int i=0;i<row;i++){
+       for(int j=0;j<col;j++){
+           scanf("%d",&a[i][j]);
+       }
+   }
+   max=a[0][0];
+   for(int i=0;i<row;i++){
+       for(int j=1;j<col;j++){
+           if(max<a[i][j])
+           max=a[i][j];
+        }
+       
+   }
+   printf("%d",max);
+  
+
+    return 0;
+}
